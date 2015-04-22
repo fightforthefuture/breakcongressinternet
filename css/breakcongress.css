@@ -1,0 +1,468 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+/* --- end public domain code --- */
+.clear:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+.clear {display: inline-block;}
+/* hide IE mac \*/
+* html .clear {height: 1%;}
+.clear {display: block;}
+/* */
+* {
+    box-sizing: border-box;
+}
+a {
+    color: #ccc;
+    text-decoration: underline;
+}
+body {
+    background: #161616 url(../images/background.jpg) center top no-repeat;
+    background-size: 100% auto;
+    font-family: "proxima-nova";
+    text-align: center;
+}
+h1 {
+    font-family: "futura-pt";
+    color: #f0d88d;
+    font-size: 71px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 70px 0px 0px 0px;
+    letter-spacing: 8px;
+}
+h2 {
+    font-family: "futura-pt";
+    color: #f0d88d;
+    font-size: 56px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+}
+h3 {
+    font-family: "futura-pt";
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 15px 0px 45px 0px;
+}
+h4 {
+    text-align: center;
+    
+    color: #f0d88d;
+    font-size: 38px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+h5 {
+    text-align: center;
+    font-size: 36px;
+    color: #cfcfcf;
+    
+    font-size: 23px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    margin-bottom: 50px;
+}
+h6 {
+    text-align: center;
+    
+    color: #f0d88d;
+    font-size: 29px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+blockquote {
+    display: inline-block;
+    background: #1f1f1f;
+    padding: 25px;
+    color: #8a8a8a;
+    font-family: "Courier New", mono;
+    margin-top: 15px;
+    margin-bottom: 60px;
+}
+header {
+}
+header p {
+    max-width: 860px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 22px;
+    color: #c5c5c5;
+    font-weight: 300;
+    line-height: 30px;
+}
+.action {
+    width: 900px;
+    background: #353535;
+    padding: 45px 60px;
+    margin: 35px auto 50px auto;
+}
+.action .email_signup {
+    width: 430px;
+    height: 60px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+.action .email_signup #thanks {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: #222;
+    z-index: 2;
+    line-height: 60px;
+    font-size: 20px;
+    color: white;
+    -webkit-transition: opacity 0.4s ease-out;
+        transition: opacity 0.4s ease-out;
+
+    display: none;
+    opacity: 0;
+}
+.action .email_signup input {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 250px;
+    height: 60px;
+    border: 0px;
+    line-height: 60px;
+    padding: 0px 20px;
+    font-size: 25px;
+    font-family: "proxima-nova";
+    font-weight: 100;
+}
+.action .email_signup button {
+    position: absolute;
+    left: 250px;
+    top: 0px;
+    width: 180px;
+    background: #36c994;
+}
+.action .email_signup button:hover {
+    background: #26b984;
+}
+.action .or {
+    display: inline-block;
+    height: 60px;
+    vertical-align: top;
+    color: white;
+    line-height: 60px;
+    font-size: 18px;
+    width: 55px;
+    text-align: center;
+}
+.action .twitter_signup {
+    display: inline-block;
+    width: 295px;
+    height: 60px;
+    vertical-align: top;
+}
+.action .twitter_signup button {
+    width: 295px;
+    height: 60px;
+    background: #59c9e9;
+}
+.action .twitter_signup button:hover {
+    background: #49b9d9;
+}
+.action span.disclaimer {
+    display: block;
+    font-size: 15px;
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+    color: #898989;
+}
+button {
+    height: 60px;
+    border: 0px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 22px;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: "futura-pt";
+}
+p.explanation {
+    color: #898989;
+}
+.columns {
+    margin-bottom: 60px;
+}
+.columns > div {
+    display: inline-block;
+    width: 485px;
+}
+.columns > div:first-child {
+    border-right: 1px solid #323232;
+}
+section {
+    background: #282828;
+    padding: 55px 0px 55px 0px;
+}
+section h2 {
+    font-weight: 300;
+    margin-bottom: 45px;
+}
+section hr {
+    width: 140px;
+    border: 0px;
+    border-bottom: 1px solid #6b6b6b;
+    margin-bottom: 35px;
+}
+section p {
+    max-width: 800px;
+    margin: 0px auto 25px auto;
+    text-align: center;
+    font-size: 22px;
+    color: #c5c5c5;
+    font-weight: 300;
+    line-height: 30px;
+}
+.share {
+    border-radius: 60px;
+    padding: 10px;
+    background: #222;
+    display: inline-block;
+
+}
+.share a {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding-left: 30px;
+    font-size: 20px;
+    margin: 0px 10px 0px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+.share a.facebook {
+    background: #3B5999 url(../images/fb_white.png) 15px 8px no-repeat;
+    background-size: 25px 25px;
+}
+.share a.facebook:hover {
+    background-color: #2B4989;
+}
+.share a.twitter {
+    background: #4099FF url(../images/tw_white.png) 15px 8px no-repeat;
+    background-size: 25px 25px;
+}
+.share a.twitter:hover {
+    background-color: #3089ef;
+}
+.logos {
+    margin: 50px 0px; 
+}
+.logos a {
+    opacity: .6;
+}
+.logos a:hover {
+    opacity: .8;
+}
+.logos img {
+    max-width: 300px;
+    height: auto;
+    vertical-align: middle;
+    margin: 0px 20px;
+}
+.press {
+    font-size: 22px;
+    color: #999;
+    font-weight: 100;
+    padding-bottom: 70px;
+}
+.press a {
+    color: #bbb;
+}
+.press small {
+    display: block;
+    margin: 10px 0px 0px 0px;
+    text-align: center;
+    font-size: .8em;
+}
+
+.overlay {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    display: table;
+    display: none;
+    z-index: 9001;
+
+    -webkit-transition: opacity 0.4s ease-out 0s, left 0s linear 0s;
+            transition: opacity 0.4s ease-out 0s, left 0s linear 0s;
+}
+.overlay.invisible {
+    pointer-events: none;
+    opacity: 0;
+    left: 99999px;
+
+    -webkit-transition: opacity 0.4s ease-out 0s, left 0s linear 0.5s;
+            transition: opacity 0.4s ease-out 0s, left 0s linear 0.5s;
+}
+.overlay .gutter {
+    display: table-cell;
+    vertical-align: middle;
+}
+.overlay .gutter .modal {
+    max-width: 550px;
+    border-radius: 10px;
+    background: white;
+    color: black;
+    margin: 0px auto;
+    padding-bottom: 10px;
+    position: relative;
+    text-align: center;
+}
+.overlay .modal a.close {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    color: black;
+    opacity: .4;
+    text-decoration: none;
+    font-size: 30px;
+}
+.overlay .modal a.close:hover {
+    opacity: .6;
+}
+.overlay .modal h1 {
+    background: #20cba1;
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 31px;
+    font-family: "proxima-nova";
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+.overlay .modal h2 {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 0px 25px;
+    margin: 0px auto;
+}
+.overlay .modal p {
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #333;
+    margin-bottom: 0px;
+    font-size: 18px;
+    line-height: 23px;
+}
+.overlay .modal label {
+    font-size: 13px;
+    display: inline-block;
+    width: 130px;
+    text-align: left;
+}
+.overlay .modal label span {
+    color: gray;
+}
+.overlay .modal input {
+    width: 280px;
+    font-size: 20px;
+}
+.overlay .modal select {
+    width: 280px;
+    font-size: 20px;
+}
+.overlay .modal hr {
+    border: 0px;
+}
+.overlay .modal button {
+    display: inline-block;
+    margin: 15px auto 20px auto;
+    outline: medium none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+
+    padding: 0.5em 2em 0.55em;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 0.5em;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    border: 1px solid #12A1D6;
+
+    background: #32c0f2; /* Old browsers */
+    background: -moz-linear-gradient(top, #32c0f2 0%, #028bbb 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#32c0f2), color-stop(100%,#028bbb)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #32c0f2 0%,#028bbb 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #32c0f2 0%,#028bbb 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #32c0f2 0%,#028bbb 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #32c0f2 0%,#028bbb 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32c0f2', endColorstr='#028bbb',GradientType=0 ); /* IE6-9 */
+
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+
+    color: white;
+}
+.overlay .modal .no_thanks {
+    display: inline-block;
+    margin: 0px 10px;
+    font-size: 16px;
+}
+#battle .overlay .modal p {
+    color: #444;
+    max-width: 500px;
+    margin: 0px auto;
+    padding: 30px 25px;
+    font-size: 18px;
+}
+@media screen and (max-width: 767px) {
+    .overlay .modal h1 {
+        font-size:  18px;
+    }
+    .overlay .modal h2 {
+        font-size: 16px;
+        line-height: 21px;
+        padding: 0px 15px;
+    }
+    .overlay .modal p {
+        padding: 0px 12px;
+        font-size: 15px;
+        line-height: 21px;
+    }
+    .overlay .modal button {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+}
