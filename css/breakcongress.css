@@ -91,10 +91,10 @@ blockquote {
     display: inline-block;
     background: #1f1f1f;
     padding: 25px;
-    color: #8a8a8a;
+    color: #aaa;
     font-family: "Courier New", mono;
     margin-top: 15px;
-    margin-bottom: 60px;
+    margin-bottom: 15px;
 }
 header {
 }
@@ -205,6 +205,9 @@ button {
 }
 p.explanation {
     color: #898989;
+    max-width: 800px;
+    margin: 0px auto 60px auto;
+    line-height: 1.3em;
 }
 .columns {
     margin-bottom: 60px;
@@ -218,11 +221,12 @@ p.explanation {
 }
 section {
     background: #282828;
-    padding: 55px 0px 55px 0px;
+    padding: 10px 0px 55px 0px;
 }
 section h2 {
     font-weight: 300;
-    margin-bottom: 45px;
+    margin-top: 45px;
+    margin-bottom: 35px;
 }
 section hr {
     width: 140px;
@@ -234,10 +238,10 @@ section p {
     max-width: 800px;
     margin: 0px auto 25px auto;
     text-align: center;
-    font-size: 22px;
-    color: #c5c5c5;
+    font-size: 18px;
+    color: #d5d5d5;
     font-weight: 300;
-    line-height: 30px;
+    line-height: 24px;
 }
 .share {
     border-radius: 60px;
