@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-
+<script src="//cdn.optimizely.com/js/2798270273.js"></script>
 <meta charset="utf-8">
 <title>Break Congress' Internet.</title>
 <link rel="stylesheet" type="text/css" href="css/breakcongress.css"/>
@@ -9,6 +9,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="//use.typekit.net/pip1ypt.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
+<script type="text/javascript">
+
+TWEET_TEXT = "No one has the right to spy on our private lives. We're planning to Break Congress' Internet to end mass spying. https://www.breakcongressinternet.com";
+EMAIL_SUBJECT = "Break Congress' Internet to end mass spying.";
+
+
+</script>
 </head>
 <body>
 
@@ -21,7 +28,7 @@
     </p>
     <div class="action">
         <div class="email_signup">
-            <div id="thanks">Thanks! We'll email you on the day of action!</div>
+            <div id="thanks">Thanks! Please check your email.</div>
             <form><input type="text" id="email" placeholder="Join with e-mail"/><button type="submit">I’m in</button></form>
         </div><div class="or">OR</div><div class="twitter_signup">
             <button id="twitter-button">Join with Twitter</button>
@@ -111,13 +118,45 @@ There are multiple bills being introduced in both the House and Senate, and the 
         <div class="modal">
             <a class="close" href="#">×</a>
             <h1>Help us break Congress' Internet to stop mass spying.</h1>
-            <p class="nopad">There are countless battles that need to be won to keep the Internet open. From protecting net neutrality to stopping secret deals that could censor the net, we need your help. Will you let us automatically post urgent alerts to your twitter, about once a week? (You can disable at any time, of course.)</p>                <form action="//radiant-earth-4575.herokuapp.com/auth/twitter_prep" method="POST" id="tweez" target="_blank">
+            <p class="nopad">There are countless battles that need to be won to keep the Internet open. From protecting net neutrality to stopping secret deals that could censor the net, we need your help. Will you let us automatically post urgent alerts to your twitter, about once a week? (You can disable at any time, of course.)</p>                <form action="//radiant-earth-4575.herokuapp.com/auth/twitter_prep" method="POST" id="twitter_signup_submit" target="_blank">
                 <input type="hidden" name="frequency" value="1" />
                 <hr/>
                 <button id="twitter_submit_button" type="submit">Authorize with Twitter</button>
             </form>
         </div>
     </div>
+</div>
+
+<div class="overlay share_modal invisible" id="share_modal">
+    <div class="gutter">
+        <div class="modal">
+            <a class="close" href="#">×</a>
+            <h1>Thanks. Please share this!</h1>
+            <p class="nopad">
+                Time is running out. In order to send Congress a message they
+                can't ignore, we need as many people to participate as possible.
+                Please share this page now!
+            </p>
+            <div class="share">
+                <a href="https://www.facebook.com" class="facebook" target="_blank">Share</a><a href="https://www.twitter.com" class="twitter" target="_blank">Tweet</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="social-buttons">
+    <a target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.battleforthenet.com/" class="facebook">
+        Share
+    </a>
+
+    <a target="_blank" href="https://twitter.com/intent/tweet?related=fightfortheftr&text=As%20a%20historic%20FCC%20vote%20on%20%23netneutrality%20draws%20near,%20see%20who%20in%20Congress%20is%20working%20to%20kill%20it.%20Change%20history:%20battleforthenet.com" class="twitter">
+        Tweet
+    </a>
+
+    <a href="mailto:person@domain.tld" class="email">
+        Email
+    </a>
 </div>
 
 <script type="text/javascript" src="js/breakcongress.js"></script>
