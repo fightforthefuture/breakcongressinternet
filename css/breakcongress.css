@@ -91,6 +91,7 @@ blockquote {
     display: inline-block;
     background: #1f1f1f;
     padding: 15px;
+    font-size: 15px;
     color: #aaa;
     font-family: "Courier New", mono;
     margin-top: 15px;
