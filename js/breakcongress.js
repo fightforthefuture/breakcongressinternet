@@ -96,7 +96,7 @@ for (var i = 0; i < ems.length; i++) {
     ems[i].addEventListener('click', function(e) {
         e.preventDefault();
         trackOptimizely('share');
-        window.open('mailto:?subject='+encodeURIComponent(EMAIL_SUBJECT)+'&body=https%3A%2F%2Fwww.breakcongressinternet.com%2F');
+        window.location.href = 'mailto:?subject='+encodeURIComponent(EMAIL_SUBJECT)+'&body=https%3A%2F%2Fwww.askthensa.com%2F';
     }, false);
 }
 
