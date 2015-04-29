@@ -95,7 +95,7 @@ blockquote {
     color: #aaa;
     font-family: "Courier New", mono;
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 60px;
 }
 header {
 }
@@ -205,9 +205,9 @@ button {
     font-family: "futura-pt";
 }
 p.explanation {
-    color: #898989;
+    color: #999;
     max-width: 800px;
-    margin: 0px auto 60px auto;
+    margin: 0px auto 0px auto;
     line-height: 1.3em;
 }
 .columns {
