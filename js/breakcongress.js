@@ -11,7 +11,7 @@ setInterval(function() {
 }, 100);
 
 var glitch = function() {
-    // horizontalGlitch();
+    horizontalGlitch();
 }
 
 var horizontalGlitch = function() {
