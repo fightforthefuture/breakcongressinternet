@@ -51,6 +51,9 @@
         script.setAttribute('async', 'async');
         script.setAttribute('src', 'https://fftf-geocoder.herokuapp.com/?callback=redirect_js_callback');
         document.getElementsByTagName('head')[0].appendChild(script);
+
+        // send leaderboard stat
+        sendLeaderboardStat();
     }
 
     function redirect() {
@@ -104,6 +107,31 @@
         }
 
         return maskedip;
+    }
+
+    function sendLeaderboardStat() {
+        var data = {
+            campaign: 'blackoutcongress',
+            stat: 'heartbeat',
+            data: null,
+            host: window.location.host.replace('www.', ''),
+            session: null
+        };
+
+        // Serialize data
+        var params = '';
+        for (var key in data) {
+            if (params.length !== 0) {
+                params += '&';
+            }
+            params += key + '=' + data[key];
+        }
+
+        var http = new XMLHttpRequest();
+        var url = 'https://fftf-host-counter.herokuapp.com/log';
+        http.open('POST', url, true);
+        http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        http.send(params);
     }
 
     // Let's begin.
