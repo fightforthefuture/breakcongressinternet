@@ -1,7 +1,7 @@
-const GLITCHINESS = 0.2;
-const MAX_COORD_GLITCH = 40;
-const COORD_GLITCH_MAX_ADJACENT = 10;
-const MAX_COORD_GLITCH_TIME = 200;
+var GLITCHINESS = 0.2;
+var MAX_COORD_GLITCH = 40;
+var COORD_GLITCH_MAX_ADJACENT = 10;
+var MAX_COORD_GLITCH_TIME = 200;
 
 setInterval(function() {
     var rand = Math.random();
