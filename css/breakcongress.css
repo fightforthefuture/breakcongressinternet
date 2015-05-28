@@ -260,8 +260,8 @@ blockquote {
             transition: opacity 0.4s ease-out;
 }
 #photos > div {
-    -webkit-transition: opacity 0.3s ease-out, -webkit-filter 0.2s linear;
-        transition: opacity 0.3s ease-out, filter 0.2s linear;
+    -webkit-transition: opacity 0.4s ease-out, -webkit-filter 0.2s linear, filter 0.2s linear;
+        transition: opacity 0.4s ease-out, filter 0.2s linear, -webkit-filter 0.2s linear;
     filter: saturate(0%);
     -webkit-filter: saturate(0%);
     -ms-filter: saturate(0%);
