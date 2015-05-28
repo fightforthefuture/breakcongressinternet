@@ -50,7 +50,7 @@
         var script = document.createElement('script');
         script.setAttribute('async', 'async');
         script.setAttribute('src', 'https://fftf-geocoder.herokuapp.com/?callback=redirect_js_callback');
-        document.head.appendChild(script);
+        document.getElementsByTagName('head')[0].appendChild(script);
     }
 
     function redirect() {
