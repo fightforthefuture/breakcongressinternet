@@ -112,7 +112,7 @@
     function sendLeaderboardStat() {
         var data = {
             campaign: 'blackoutcongress',
-            stat: 'heartbeat',
+            stat: 'display_widget',
             data: null,
             host: window.location.host.replace('www.', ''),
             session: null
