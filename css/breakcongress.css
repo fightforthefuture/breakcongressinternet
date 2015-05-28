@@ -822,7 +822,18 @@ div.social-buttons a.email {
     z-index: 9001;
     border-top: 2px solid #444;
 }
-.bottom a {
+.bottom img.logo {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 175px;
+    height: auto;
+    opacity: .8;
+}
+.bottom img.logo:hover {
+    opacity: 1;
+}
+.bottom a.call {
     display: block;
     background: #222;
     text-align: center;
@@ -834,14 +845,14 @@ div.social-buttons a.email {
     text-transform: uppercase;
     box-shadow: 0px 0px 20px rgba(0,0,0, .5);
 }
-.bottom a em {
+.bottom a.call em {
     color: #33e5a8;
 }
-.bottom a:hover em {
+.bottom a.call:hover em {
     text-decoration: underline;
 }
 @media screen and (max-width: 767px) {
-    .bottom a {
+    .bottom a.call {
         padding: 10px 0px;
         height: auto;
         line-height: 25px;
