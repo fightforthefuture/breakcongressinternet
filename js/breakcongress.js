@@ -115,6 +115,9 @@ var addItem = function(item) {
     img.onload = function() {
         document.getElementById(item.username+'_'+item._id).style.opacity = 1;
     }
+    setTimeout(function() {
+        document.getElementById(item.username+'_'+item._id).style.opacity = 1;
+    }, 2000);
 }
 
 var showModal = function(item) {
