@@ -296,7 +296,7 @@ var fb = document.querySelectorAll('a.facebook');
 for (var i = 0; i < fb.length; i++) {
     fb[i].addEventListener('click', function(e) {
         e.preventDefault();
-        window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.usafreedom.fail%2F');
+        window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.blackoutcongress.org%2F');
     }, false);
 }
 
