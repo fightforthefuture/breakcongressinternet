@@ -851,6 +851,11 @@ div.social-buttons a.email {
 .bottom a.call:hover em {
     text-decoration: underline;
 }
+@media screen and (max-width: 1100px) {
+    .bottom img.logo {
+        display: none;
+    }
+}
 @media screen and (max-width: 767px) {
     .bottom a.call {
         padding: 10px 0px;
