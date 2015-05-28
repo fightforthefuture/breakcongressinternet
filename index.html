@@ -1,167 +1,116 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-<script src="//cdn.optimizely.com/js/2798270273.js"></script>
-<meta charset="utf-8">
-<title>Blackout Congress' Internet.</title>
 
+<meta charset="utf-8"> 
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+
+<title>Blackout Congress.</title>
+<link rel="stylesheet" type="text/css" href="css/breakcongress.css"/>
+<meta name="viewport" content="width=630">
+<link rel="icon" type="image/png" href="https://s3.amazonaws.com/fftf-cms/static/img/fav.ico">
+<link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
 <meta property="og:title" content="Congress keeps trying to break the Internet. Let's break theirs instead."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://www.blackoutcongress.org"/>
+<meta property="og:image" content="https://www.blackoutcongress.org/images/share.png"/>
 <meta property="og:site_name" content="Blackout Congress' Internet"/>
 <meta property="fb:admins" content="612663871"/>
-<meta property="og:description" content="It's totally fun. (and totally legal)"/>
+<meta property="og:description" content="We are blacking out their Internet until they end the PATRIOT Act and stop NSA mass surveillance."/>
 
-<link rel="stylesheet" type="text/css" href="css/breakcongress.css"/>
-<link rel="icon" type="image/png" href="https://s3.amazonaws.com/fftf-cms/static/img/fav.ico">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="//use.typekit.net/pip1ypt.js"></script>
-<script>try{Typekit.load();}catch(e){}</script>
 <script type="text/javascript">
-
-TWEET_TEXT = "No one has the right to spy on our private lives. We're planning to Break Congress' Internet to end mass spying. https://www.blackoutcongress.org";
-EMAIL_SUBJECT = "Break Congress' Internet to end mass spying.";
-
-
+    var TWEET_TEXT = 'Congress: this is a blackout. blackoutcongress.com';
+    var EMAIL_SUBJECT = 'We are blacking out Congress\' Internet.';
 </script>
+
 </head>
 <body>
 
 <header>
-    <h1>Stop the PATRIOT Act</h1>
-    <h2>Blackout Congress' Internet</h2>
-    <h3>&mdash; When it matters most. &mdash;</h3>
-    <p>
-        No one has the right to spy on our lives, and US law says so. But,
-        Congress is days away from reauthorizing the Patriot Act to undermine
-        the Constitution and put us under mass surveillance for years. It's now
-        or never. Let's block all of Congress' IP addresses, and show them a
-        message they can't ignore. This is happening soon, sign up.
-    </p>
-    <div class="action">
-        <div class="email_signup">
-            <div id="thanks">Thanks! Please check your email.</div>
-            <form><input type="text" id="email" placeholder="Join with e-mail"/><button type="submit">I’m in</button></form>
-        </div><div class="or">OR</div><div class="twitter_signup">
-            <button id="twitter-button">Join with Twitter</button>
-        </div>
-        <span class="disclaimer">
-            <a href="https://www.fightforthefuture.org" target="_blank">Fight for the Future</a>
-            and
-            <a href="https://demandprogress.org/" target="_blank">Demand Progress</a>
-            will email you with campaign updates.
-            <a href="https://www.fightforthefuture.org/privacy">Privacy Policy</a>
-        </span>
+    <div class="static"></div>
+    <div class="gutter">
+        <div id="block"></div>
+        <div id="glitches"></div>
+        <div id="line"></div>
+        <div id="dome2"></div>
+        <div id="distort"></div>
+        <div id="dome"></div>
+        <div id="canvas"></div>
     </div>
+    <script type="text/javascript">
+        const COLS = 60;
+        const ROWS = 31;
+        var frag = document.createDocumentFragment();
+        var divs = [];
+        var spawnDiv = function(x, y) {
+            var div = document.createElement('div');
+            div.id = 'cx'+x+'y'+y;
+            div.style.left = x+'px';
+            div.style.top = y+'px';
+            div.style.marginLeft = '0px';
+            div.style.marginTop = '0px';
+            div.style.backgroundPosition = '-'+x+'px -'+y+'px';
+            return div;
+        }
+        for (j=0; j<ROWS; j++) {
+            var div = spawnDiv(0, j*20);
+            divs.push(div);
+            frag.appendChild(div);
+        }
+        document.getElementById('canvas').appendChild(frag);
+    </script>
 </header>
-<h4>Sites, get the code now:</h4>
-<p class="explanation">
-    If you have a site, tumblr or blog, you can install this code by pasting it right
-    before your closing &lt;/HEAD> tag. By installing this code, you will block Congress
-    from visiting your site and urge your visitors to
-    take action at key moments during the fight against the PATRIOT Act.
-</p>
-<blockquote>&lt;script src="https://fightforthefuture.github.io/ifeelnaked.js/ifeelnaked.js">&lt;/script></blockquote></p>
-
-<h5>We're still designing and coding, but this is the idea:</h5>
-<div class="columns">
-    <div>
-        <h6>What people will see</h6>
-        <img src="images/modal.png" width="380" height"284"/>
-    </div><div>
-        <h6>What Congress will see</h6>
-        <img src="images/blackout.png" width="380" height"284"/>
+<div id="main">
+    <h1>Congress:<br/>this is a blackout.</h1>
+    <div class="cta">
+        <h2>We are blocking your access until you end mass surveillance by the N.S.A.</h2>
+        <p>
+            You have presented Americans with the false dichotomy of
+            reauthorizing the PATRIOT Act or passing the USA Freedom Act. Neither
+            of these bills are acceptable. The real answer is to sunset the PATRIOT
+            Act completely and end mass surveillance by the N.S.A. Until you do,
+            thousands of web sites have blocked your access, and more are joining
+            every day.
+        </p>
     </div>
-</div>
-<section>
-
-    <h2>Spread the word.</h2>
-
+    <h3>How it works</h3>
     <p>
-        If Congress renews the bulk collection provisions of the PATRIOT Act, it's game over for our privacy. Whether
-        you're browsing the Internet, sending a text message, or buying a book, the
-        government will be watching. Don't let Congress undermine the Constitution.
-        Help us share this action with as many people as possible!
+        Participating web sites embed a small snippet of code on their pages
+        that detects the IP address of Congress' computers, redirecting anyone
+        from Congress to this blackout page.
+        <strong>To join with your site,</strong>
+        simply embed this code on your page before the closing
+        &lt;/HEAD> tag:
     </p>
-    <div class="share">
-        <a href="https://www.facebook.com" class="facebook" target="_blank">Share</a><a href="https://www.twitter.com" class="twitter" target="_blank">Tweet</a>
-    </div>
+    <blockquote>&lt;script type="text/javascript" src="https://www.blackoutcongress.org/detect.js">&lt;/script></blockquote>
+    <h4>NSA spying makes us feel naked.</h4>
+    <p>
+        It's like a strip search, online. We should never, ever have to worry
+        the government is watching our private moments. Join the protest with
+        your photos: <a href="https://www.ifeelnaked.org" target="_blank">#ifeelnaked.org</a>
 
-    <h2>What's happening?</h2>
-    
-    <p>Things are bad, but they're not unfixable. The US is off track, violating its founding principles by mass spying on everyone, out of choice. That is, Congress chose corruption over freedom. The NSA and defense companies like Lockheed Martin and Booz Allen justified the creation of the largest surveillance system in history through a culture of fear and networking with Congress.  Since then, they've given us false security for profit, a bargain that has led to a mass surveillance system that is being abused to monitor everyone, the kind of system that is usually reserved for dictatorships. We don't have to keep letting corruption trample on our basic values.
-</p>
-<p>
-The US Constitution says that there shall be no search and seizure without a probable cause. That's why Edward Snowden's revelations about the US' mass government surveillance of our private lives shocked the world. Since then, we learned what laws the government has abused to justify conducting these programs - the Patriot Act, the FISA Amendments Act, and Executive Order 12333. The Patriot Act was passed shortly after the 9/11 attacks, with minimal vetting and within a few days of being introduced.  The NSA exploits Section 215 of the Patriot Act to spy on all Americans, by collecting information about our phone records.  Other provisions have been used to collect information about our emails and to engage in other unjustifiable surveillance of ordinary Americans.
-</p>
-
-    <h2>Now, what?</h2>
-<p>
-Key Patriot Act Provisions are about to expire. On June 1st, three Patriot Act provisions need Congressional approval to be renewed — including Section 215.  Congress is considering reauthorizing it with no, or with minimal, changes and without addressing other critical surveillance programs — like warrantless wiretapping or email and other collection under Executive Order 12333 — or making the intelligence agencies more accountable. But, the Patriot Act's expiration forces Congress to consider surveillance legislation now; we can make sure these provisions' expiration is status quo and see through real surveillance reform. 
-</p><p>
-In order to end mass government surveillance, retiring key provisions of the Patriot Act is just the first part in the bigger effort to stop any codification of bulk collection of our records without a warrant and without accountability and transparency. If we work together, we can do just that. There are multiple bills being introduced in both the House and Senate, and the process moving forward will be complicated and frequently unpredictable more than a day or two ahead of time.  We’ll update the site to reflect key changes in the state of play and make sure that actions are targeted to have the most impact. This is the way we have won big things in the past, and we have to do the same to address surveillance this year.  
-</p>
-
-
-</section>
-<div class="logos">
-    <a href="https://www.fightforthefuture.org" target="_blank"><img src="images/fftf.png"></a>
-    <a href="https://demandprogress.org"><img src="images/dp.png"></a>
-</div>
-<div class="press">
-    For press inquiries, please contact us at:
-    <br/><br/>
-    <a href="tel://1-978-852-6457">978-852-6457</a>
-    <em>or</em>
-    <a href="tel://1-617-690-9547">617-690-9547</a>
-    <em>or</em>
-    <a href="mailto:press@fightforthefuture.org">press@fightforthefuture.org</a>
-    <br/><br/>
-    <a href="tel://202-681-7582">202-681-7582</a>
-    <em>or</em>
-    <a href="mailto:press@demandprogress.org">press@demandprogress.org</a>
-    <br/><br/>
-    <small>
-        All other inquiries, contact <a href="mailto:team@fightforthefuture.org">team@fightforthefuture.org</a>
-    </small>
-</div>
-
-
-<div class="overlay twitter invisible" id="twitter_modal">
-    <div class="gutter">
-        <div class="modal">
-            <a class="close" href="#">×</a>
-            <h1>Help us break Congress' Internet to end mass spying.</h1>
-            <p class="nopad">
-                Awesome! Monopolies and governments are trying to manipulate the Internet for gain, so we're building a twitter army to defend ourselves and send out messages the world can't ignore. Using our automatic tweet tool, thousands of people broadcast urgent alerts on their twitter feeds at the same time at key moments in the fight. You can do this too &mdash; just authorize the tool on the next screen (you can quit at any time). Let's use the Internet to defend itself and our freedom to build the world around us. Click to start!
-            </p>
-            <form action="//radiant-earth-4575.herokuapp.com/auth/twitter_prep" method="POST" id="twitter_signup_submit" target="_blank">
-                <input type="hidden" name="frequency" value="1" />
-                <hr/>
-                <button id="twitter_submit_button" type="submit">Authorize with Twitter</button>
-            </form>
-        </div>
-    </div>
-</div>
-
-<div class="overlay share_modal invisible" id="share_modal">
-    <div class="gutter">
-        <div class="modal">
-            <a class="close" href="#">×</a>
-            <h1>Thanks. Please share this!</h1>
-            <p class="nopad">
-                Time is running out. In order to send Congress a message they
-                can't ignore, we need as many people to participate as possible.
-                Please share this page now!
-            </p>
-            <div class="share">
-                <a href="https://www.facebook.com" class="facebook" target="_blank">Share</a><a href="https://www.twitter.com" class="twitter" target="_blank">Tweet</a>
+    </p>
+    <div id="photos"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    <div id="load_more">
+        <a href="#" class="moar">Load more...</a>
+        <div class="spinner_container" id="spinner" style="display: none;">
+            <div class="spinner">
+                <div class="blade d01"><div></div></div>
+                <div class="blade d02"><div></div></div>
+                <div class="blade d03"><div></div></div>
+                <div class="blade d04"><div></div></div>
+                <div class="blade d05"><div></div></div>
+                <div class="blade d06"><div></div></div>
+                <div class="blade d07"><div></div></div>
+                <div class="blade d08"><div></div></div>
+                <div class="blade d09"><div></div></div>
+                <div class="blade d10"><div></div></div>
+                <div class="blade d11"><div></div></div>
+                <div class="blade d12"><div></div></div>
             </div>
         </div>
     </div>
 </div>
-
-
 <div class="social-buttons">
     <a target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.battleforthenet.com/" class="facebook">
         Share
@@ -175,9 +124,11 @@ In order to end mass government surveillance, retiring key provisions of the Pat
         Email
     </a>
 </div>
-
-<script type="text/javascript" src="js/breakcongress.js"></script>
+<div class="bottom">
+    <a href="https://www.sunsetthepatriotact.com/?call=1" target="_blank">Call your lawmakers. Dial <em>1-920-END-4-215</em> <img src="/images/phone_icon.png"/></a>
+</div>
+<script type="text/javascript" src="/js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="/js/breakcongress.js"></script>
 
 </body>
 </html>
-
