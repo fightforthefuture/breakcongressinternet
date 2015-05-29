@@ -62,6 +62,9 @@ body {
     font-family: 'Proxima Nova';
     color: white;
 }
+body.noscroll {
+    overflow: hidden;
+}
 a {
     color: white;
     font-weight: 500;
@@ -170,11 +173,17 @@ header #canvas > div {
     top: 0px;
     width: 100%;
     z-index: 11;
-    padding: 50px 15px;
+    padding: 30px 15px;
     text-align: center;
     color: #ddd;
 }
-
+#leaderboard_link {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+    visibility: hidden;
+}
 h1 {
     color: white;
     text-align: center;
@@ -374,7 +383,6 @@ blockquote {
 .modal.photo .tweet.share span {
     display: block;
     text-align: center;
-    font-family: "open-sans";
     font-size: 1.2em;
     margin-bottom: 15px;
 }
@@ -409,7 +417,6 @@ blockquote {
     margin: 3px 10px 3px 10px;
     border-radius: 20px;
     font-weight: 500;
-    font-family: "open-sans";
     position: relative;
     
 }
@@ -449,6 +456,9 @@ blockquote {
 .modal.photo .tweet a.share.tw:hover {
     background-color: #41b9e0;
 }
+.modal a {
+    color: #448;
+}
 .modal a.close {
     position: absolute;
     right: 7px;
@@ -473,6 +483,8 @@ blockquote {
 }
 .modal a.close:before {
     line-height: 35px;
+    font-family: "Arial";
+    font-weight: normal;
     content: "×";
 }
 .modal a.close.lite {
@@ -488,7 +500,6 @@ blockquote {
 .modal .explanation {
     background: #fff;
     padding: 55px 0px 0px 0px;
-    font-family: "open-sans";
     font-size: 22.42px;
     line-height: 29px;
     max-width: 745px;
@@ -506,7 +517,7 @@ blockquote {
     color: #ff4e52;
 }
 .modal .explanation .example {
-    background: #ededed url(../images/modal_background.png) left top repeat-x;
+    /*background: #ededed url(../images/modal_background.png) left top repeat-x;*/
     padding: 20px 15px 25px 15px;
     font-size: 17px;
     color: #686868;
@@ -550,7 +561,6 @@ blockquote {
     line-height: 56px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-family: "open-sans";
     color: white;
     font-weight: bold;
     font-size: 19px;
@@ -577,7 +587,6 @@ blockquote {
     border-bottom: 1px solid #aaa;
     margin-bottom: 5px;
     padding: 10px 15px;
-    font-family: "open-sans";
     font-size: 18px;
 }
 .modal .explanation .example input.long {
@@ -593,7 +602,6 @@ blockquote {
     margin-bottom: 5px;
     box-sizing: border-box;
     padding: 10px 15px;
-    font-family: "open-sans";
     font-size: 14px;
     height: 100px;
 }

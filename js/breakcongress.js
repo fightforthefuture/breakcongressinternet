@@ -51,6 +51,10 @@ var setTranslateX = function(el, pix) {
     el.style["transform"] = "translate(" + pix + "px, 0px)";
 }
 
+var numberWithCommas = function(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 $(function() { /////////////////////////////////////////////////////////////////
 
 var isScrolledIntoView = function(elem)
@@ -338,5 +342,99 @@ for (var i = 0; i < ems.length; i++) {
         window.location.href = 'mailto:?subject='+encodeURIComponent(EMAIL_SUBJECT)+'&body=http%3A%2F%2Fwww.blackoutcongress.org%2F';
     }, false);
 }
+
+var leaderboard_url = 'https://battleforthenet.s3.amazonaws.com/leaderboards/ifeelnaked.display_widget.json';
+$.ajax(leaderboard_url, {
+    success: function(data) {
+        
+        document.getElementById('leaderboard_link').textContent = numberWithCommas(data.sites_participating) + ' sites and counting!';
+        document.getElementById('leaderboard_link').style.visibility = 'visible';
+        document.getElementById('leaderboard_link').addEventListener('click', function(e) {
+            e.preventDefault();
+            var overlay = document.createElement('div');
+            overlay.className = 'overlay invisible';
+
+            var gutter = document.createElement('div');
+            gutter.className = 'gutter';
+
+            var modal = document.createElement('div');
+            modal.className = 'modal leaderboard';
+
+            var close = document.createElement('a');
+            close.href = '#';
+            close.className = 'close lite';
+            close.addEventListener('click', function(e) {
+                e.preventDefault();
+                close_modal();
+            }, false);
+            modal.appendChild(close);
+
+            var div = document.createElement('div');
+            div.className = 'explanation';
+            var p = document.createElement('p');
+            var strong = document.createElement('strong');
+            strong.textContent = numberWithCommas(data.sites_participating) + ' sites and counting!';
+            p.appendChild(strong);
+            var br = document.createElement('br');
+            p.appendChild(br);
+            var span = document.createElement('span');
+            span.textContent = 'Thousands of web sites are blocking access to Congress, making the statement that mass surveillance must end forever. ';
+            p.appendChild(span);
+            var a = document.createElement('a');
+            a.textContent = 'Join with your site!';
+            a.href = 'https://github.com/fightforthefuture/breakcongressinternet/blob/gh-pages/README.md';
+            a.target = '_blank';
+            p.appendChild(a);
+            div.appendChild(p);
+
+            var ex = document.createElement('div');
+            ex.className = 'example';
+            var ul = document.createElement('ul');
+            ul.className = 'leaderboard';
+            for (var site in data.sites_top) {
+                if (data.sites_top.hasOwnProperty(site)) {
+                    var li = document.createElement('li');
+                    var a2 = document.createElement('a');
+                    a2.textContent = site;
+                    a2.href = 'http://'+site;
+                    a2.target = '_blank';
+                    li.appendChild(a2);
+                    var s2 = document.createElement('span');
+                    s2.textContent = ' ('+numberWithCommas(data.sites_top[site]).replace('.0', '')+')';
+                    li.appendChild(s2);
+                    ul.appendChild(li);
+                }
+            }
+            ex.appendChild(ul);
+            div.appendChild(ex);
+
+
+            modal.appendChild(div);
+            
+            
+            gutter.appendChild(modal);
+            overlay.appendChild(gutter);
+            document.body.appendChild(overlay);
+
+            var close_modal = function() {
+                overlay.className = 'overlay invisible';
+                setTimeout(function() {
+                    document.body.removeChild(overlay);
+                    document.body.className = '';
+                }, 400);
+            }
+
+            gutter.addEventListener('click', function(e) {
+                if (e.target == gutter)
+                    close_modal();
+            }, false);
+
+            overlay.style.display = 'block';
+            setTimeout(function() { overlay.className = 'overlay'; }, 50);
+            document.body.className = 'noscroll';
+        }, false);
+    }
+});
+
 
 }); ////////////////////////////////////////////////////////////////////////////
