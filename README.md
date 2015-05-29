@@ -6,7 +6,7 @@ We are blacking out Congress' Internet until they end all mass surveillance laws
 and let the PATRIOT Act expire. By default, Congress will be redirected to
 [blackoutcongress.org][1], but you can customize the URL and
 send to your own blackout page! You can also disable _#ifeelnaked_ photos to
-keep your site rated PG. Instructions below.
+keep your site rated PG.
 
 ### Installation Instructions
 
