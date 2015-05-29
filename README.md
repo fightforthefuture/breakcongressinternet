@@ -8,15 +8,6 @@ and let the PATRIOT Act expire. By default, Congress will be taken to our
 [landing page][1] with the following message, but you can customize the URL and
 send to your own blackout page! Instructions below.
 
-    **We are blocking your access until you end mass surveillance laws**
-
-    You have conducted mass surveillance of everyone illegally and are now on
-    record for trying to enact those programs into law. You have presented
-    Americans with the false dichotomy of reauthorizing the PATRIOT Act or
-    passing the USA Freedom Act. The real answer is to end all authorities used
-    to conduct mass surveillance. Until you do, thousands of web sites have
-    blocked your access, and more are joining every day.
-
 ### Installation Instructions
 
 Super easy. Simply embed this code on your page before the closing </HEAD> tag:
@@ -40,7 +31,7 @@ fftf_redirectjs = {
 </script>
 <script type="text/javascript" src="https://www.blackoutcongress.org/detect.js"></script>
 ```
-
+----------------------------------------
 **Always redirect (useful for testing)**
 
 If, for some reason, you want to always redirect for everyone who visits your
@@ -55,7 +46,7 @@ fftf_redirectjs = {
 </script>
 <script type="text/javascript" src="https://www.blackoutcongress.org/detect.js"></script>
 ```
-
+----------------------------------------------------------------
 **Use the default landing page, but no [#ifeelnaked][2] photos**
 
 If you want to keep your site strictly PG-rated, you can link to the default
