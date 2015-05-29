@@ -55,10 +55,14 @@
     }
 
     function redirect() {
-        if (window.fftf_redirectjs && window.fftf_redirectjs.url) {
+        if (window.fftf_redirectjs && window.fftf_redirectjs.url)
             var url = window.fftf_redirectjs.url
-        } else {
+        
+        else {
             var url = 'https://www.blackoutcongress.org/'
+
+            if (window.fftf_redirectjs && window.fftf_redirectjs.noNudes)
+                url += '?pg=1';
         }
         location.replace(url);
     }

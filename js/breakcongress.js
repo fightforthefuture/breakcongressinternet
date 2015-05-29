@@ -303,7 +303,10 @@ var doLoad = function(sofar) {
     }
 
 }
-doLoad();
+if (window.location.href.indexOf('pg=1') == -1)
+    doLoad();
+else
+    document.getElementById('nakedpics').style.display = 'none';
 
 var hide_spinner = function() {
     document.querySelector('#load_more a.moar').style.display = 'block';

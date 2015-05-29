@@ -56,6 +56,21 @@ fftf_redirectjs = {
 <script type="text/javascript" src="https://www.blackoutcongress.org/detect.js"></script>
 ```
 
+**Use the default landing page, but no [#ifeelnaked][2] photos**
+
+If you want to keep your site strictly PG-rated, you can link to the default
+blackoutcongress.org landing page _minus_ all the shirtless photos of NSA
+protestors. Just use the `noNudes` parameter.
+
+```html
+<script type="text/javascript">
+fftf_redirectjs = {
+    noNudes: true
+}
+</script>
+<script type="text/javascript" src="https://www.blackoutcongress.org/detect.js"></script>
+```
+
 ### Questions, comments?
 
 Please email jeff@fightforthefuture.org, submit an Issue, a Pull Request, or
@@ -64,3 +79,4 @@ adding the widget!
 
 
 [1]: https://www.blackoutcongress.org
+[2]: https://www.ifeelnaked.org
