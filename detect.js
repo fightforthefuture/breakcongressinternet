@@ -39,11 +39,7 @@
     ];
 
     function main() {
-        if (
-            window.fftf_redirectjs
-            &&
-            window.fftf_redirectjs.alwaysRedirect
-        ) {
+        if (window.fftf_redirectjs && window.fftf_redirectjs.alwaysRedirect) {
             redirect();
             return;
         }
@@ -59,7 +55,12 @@
     }
 
     function redirect() {
-        location.replace('https://www.blackoutcongress.org/');
+        if (window.fftf_redirectjs && window.fftf_redirectjs.url) {
+            var url = window.fftf_redirectjs.url
+        } else {
+            var url = 'https://www.blackoutcongress.org/'
+        }
+        location.replace(url);
     }
 
     window.redirect_js_callback = function(geolocation) {
