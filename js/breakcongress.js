@@ -346,11 +346,9 @@ for (var i = 0; i < ems.length; i++) {
 var leaderboard_url = 'https://battleforthenet.s3.amazonaws.com/leaderboards/ifeelnaked.display_widget.json';
 $.ajax(leaderboard_url, {
     success: function(data) {
-        
-        document.getElementById('leaderboard_link').textContent = numberWithCommas(data.sites_participating) + ' sites and counting!';
-        document.getElementById('leaderboard_link').style.visibility = 'visible';
-        document.getElementById('leaderboard_link').addEventListener('click', function(e) {
-            e.preventDefault();
+
+        var showLeaderboard = function(e) {
+            if (e) e.preventDefault();
             var overlay = document.createElement('div');
             overlay.className = 'overlay invisible';
 
@@ -435,7 +433,19 @@ $.ajax(leaderboard_url, {
             overlay.style.display = 'block';
             setTimeout(function() { overlay.className = 'overlay'; }, 50);
             document.body.className = 'noscroll';
+        }
+        
+        document.getElementById('leaderboard_link').textContent = numberWithCommas(data.sites_participating) + ' sites and counting!';
+        document.getElementById('leaderboard_link').style.visibility = 'visible';
+        document.getElementById('leaderboard_link').addEventListener('click', function(e) {
+            showLeaderboard(e);
         }, false);
+        
+        if (window.location.href.indexOf('leaderboard=1') != -1) {
+            console.log('open leaderboard');
+            showLeaderboard();
+        }
+        
     }
 });
 
