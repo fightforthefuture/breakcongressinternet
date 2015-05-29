@@ -4,13 +4,13 @@ Blackout Congress JavaScript Widget
 This is the JavaScript code provided by **[blackoutcongress.org][1]** to block
 Congress from visiting any page that embeds it. Join the protest with your site!
 We are blacking out Congress' Internet until they end all mass surveillance laws
-and let the PATRIOT Act expire. By default, Congress will be taken to our
-[landing page][1] with the following message, but you can customize the URL and
+and let the PATRIOT Act expire. By default, Congress will be taken to
+[blackoutcongress.org][1], but you can customize the URL and
 send to your own blackout page! Instructions below.
 
 ### Installation Instructions
 
-Super easy. Simply embed this code on your page before the closing </HEAD> tag:
+Super easy. Simply embed this code on your page before the closing /HEAD tag:
 
 ```html
 <script type="text/javascript" src="https://www.blackoutcongress.org/detect.js"></script>
@@ -51,7 +51,7 @@ fftf_redirectjs = {
 
 If you want to keep your site strictly PG-rated, you can link to the default
 blackoutcongress.org landing page _minus_ all the shirtless photos of NSA
-protestors. Just use the `noNudes` parameter.
+protestors. **([See example][3])** Just use the `noNudes` parameter.
 
 ```html
 <script type="text/javascript">
@@ -71,3 +71,4 @@ adding the widget!
 
 [1]: https://www.blackoutcongress.org
 [2]: https://www.ifeelnaked.org
+[3]: https://www.blackoutcongress.org/?pg=1
