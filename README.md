@@ -51,7 +51,7 @@ fftf_redirectjs = {
 
 If you want to keep your site strictly PG-rated, you can link to the default
 blackoutcongress.org landing page _minus_ all the shirtless photos of NSA
-protestors. Just use the `noNudes` parameter.
+protestors. **([See example][3])** Just use the `noNudes` parameter.
 
 ```html
 <script type="text/javascript">
@@ -71,3 +71,4 @@ adding the widget!
 
 [1]: https://www.blackoutcongress.org
 [2]: https://www.ifeelnaked.org
+[3]: https://www.blackoutcongress.org/?pg=1
