@@ -380,7 +380,7 @@ $.ajax(leaderboard_url, {
             p.appendChild(span);
             var a = document.createElement('a');
             a.textContent = 'Join with your site!';
-            a.href = 'https://github.com/fightforthefuture/breakcongressinternet/blob/gh-pages/README.md';
+            a.href = 'https://members.internetdefenseleague.org/';
             a.target = '_blank';
             p.appendChild(a);
             div.appendChild(p);
