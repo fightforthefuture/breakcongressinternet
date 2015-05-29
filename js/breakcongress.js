@@ -389,6 +389,9 @@ $.ajax(leaderboard_url, {
 
             var ex = document.createElement('div');
             ex.className = 'example';
+            var top = document.createElement('strong');
+            top.textContent = 'Top 100 sites:';
+            ex.appendChild(top);
             var ul = document.createElement('ul');
             ul.className = 'leaderboard';
             for (var site in data.sites_top) {

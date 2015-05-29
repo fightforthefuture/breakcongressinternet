@@ -517,7 +517,7 @@ blockquote {
     color: #ff4e52;
 }
 .modal .explanation .example {
-    /*background: #ededed url(../images/modal_background.png) left top repeat-x;*/
+    background: #ededed;
     padding: 20px 15px 25px 15px;
     font-size: 17px;
     color: #686868;
