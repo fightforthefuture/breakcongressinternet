@@ -83,12 +83,14 @@ document.querySelector('#load_more a.moar').addEventListener('click', function(e
     doLoadMore();
 }, false);
 
-$(window).scroll(function(e) {
-    
-    if (isScrolledIntoView('#load_more')) {
-        doLoadMore();
-    }
-});
+if (window.location.href.indexOf('pg=1') == -1) {
+    $(window).scroll(function(e) {
+        
+        if (isScrolledIntoView('#load_more')) {
+            doLoadMore();
+        }
+    });
+}
 
 var promotedPage = 0;
 var promotedPerPage = 60;
