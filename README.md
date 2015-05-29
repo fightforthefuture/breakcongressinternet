@@ -20,8 +20,8 @@ Super easy. Simply embed this code on your page before the closing </HEAD> tag:
 
 **Customize the blackout page URL**
 
-If you want to use your own landing page for the blackout, add a script
-containing the `fftf_redirectjs` config object before your embed. Like so:
+If you want to use your own landing page for the blackout, use this code (be
+sure to customize YOUR_URL.COM):
 
 ```html
 <script type="text/javascript">
