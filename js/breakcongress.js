@@ -319,6 +319,134 @@ var hide_spinner = function() {
     document.getElementById('spinner').style.display = 'none';
 }
 
+var show_modal = function(el) {
+    var overlay = document.getElementById(el);
+    overlay.style.display = 'block';
+    setTimeout(function() { overlay.className = 'overlay'; }, 30);
+}
+
+var hide_modal = function(el) {
+    var overlay = document.getElementById(el);
+    overlay.className = 'overlay invisible';
+    setTimeout(function() { overlay.style.display = 'none'; }, 400);
+}
+
+var bind_hide = function(el) {
+    document.querySelector('#'+el+' .close.lite').addEventListener(
+        'click', function(e) {
+            e.preventDefault();
+            hide_modal(el);
+        }, false
+    );
+}
+
+var close_modals = ['thanks_modal', 'calling_modal'];
+
+document.querySelector('#fields form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var error = false;
+
+    var first_name = document.getElementById('cta_first_name');
+    var email = document.getElementById('cta_email');
+    var address1 = document.getElementById('cta_street_address');
+    var zip = document.getElementById('cta_postcode');
+
+    var add_error = function(el) {
+        console.log('error: ', el);
+        el.className = 'error';
+        error = true;
+    };
+
+    if (!first_name.value) add_error(first_name);
+    if (!email.value) add_error(email);
+    if (!address1.value) add_error(address1);
+    if (!zip.value) add_error(zip);
+
+    if (error) return alert('Please fill out all fields :)');
+
+    var data = new FormData();
+    data.append('guard', '');
+    data.append('hp_enabled', true);
+    data.append('member[first_name]', first_name.value);
+    data.append('member[email]', email.value);
+    data.append('member[street_address]', address1.value);
+    data.append('member[postcode]', zip.value);
+    data.append('action_comment', document.getElementById('action_comment').value);
+    data.append('subject', 'Further action on surveillance reform is needed.');
+    data.append('org', 'fftf');
+    data.append('tag', 'blackoutcongress');
+
+    var url = 'https://queue.fightforthefuture.org/action';
+    show_modal('thanks_modal');
+
+    /*
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            console.log('response:', xhr.response);
+        }
+    }.bind(this);
+    xhr.open("post", url, true);
+    xhr.send(data);
+    */
+
+    document.getElementById('fields').style.display = 'none';
+    document.getElementById('cta_thanks').style.display = 'block';
+    
+}, false);
+
+var validate_phone = function(num) {
+    num = num.replace(/\s/g, '').replace(/\(/g, '').replace(/\)/g, '');
+    num = num.replace("+", "").replace(/\-/g, '');
+
+    if (num.charAt(0) == "1")
+        num = num.substr(1);
+
+    if (num.length != 10)
+        return false;
+
+    return num;
+};
+
+document.querySelector('#thanks_modal form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    console.log('Call submit');
+
+    var phone = document.getElementById('call_phone').value;
+
+    if (!validate_phone(phone))
+        return alert('Please enter a valid US phone number!');
+
+    var data = new FormData();
+    data.append('campaignId', 'endsurveillance');
+    data.append('zipcode', document.getElementById('cta_postcode').value);
+    data.append('userPhone', validate_phone(phone));
+
+    var url = 'https://call-congress.fightforthefuture.org/create';
+
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            console.log('sent!', xhr.response);
+        }
+    }.bind(this);
+    xhr.open("post", url, true);
+    xhr.send(data);
+
+    hide_modal('thanks_modal');
+    show_modal('calling_modal');
+
+}, false);
+
+document.querySelector('#cta_call').addEventListener('click', function(e) {
+    e.preventDefault();
+    show_modal('thanks_modal');
+}, false);
+
+for (var i=0; i<close_modals.length; i++)
+    bind_hide(close_modals[i]);
+
 var fb = document.querySelectorAll('a.facebook');
 for (var i = 0; i < fb.length; i++) {
     fb[i].addEventListener('click', function(e) {

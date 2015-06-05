@@ -262,6 +262,66 @@ blockquote {
 }
 
 
+#fields form {
+    margin: 0px auto;
+    max-width: 800px;
+}
+#fields input {
+    display: inline-block;
+    width: 25%;
+    box-sizing: border-box;
+    border-left: 1px solid #000;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-right: 0px none transparent;
+    padding: 10px 15px;
+    font-size: 20px;
+    margin-bottom: 1px;
+    font-weight: 500;
+    font-family: "Proxima Nova";
+}
+#fields textarea {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 110px;
+    box-sizing: border-box;
+    padding: 15px 15px 3px 15px;
+    font-size: 16px;
+    font-family: "Georgia";   
+    color: #333;
+
+}
+
+#fields input.error {
+    background: #ecc;
+}
+#fields button, #cta_thanks button {
+    box-sizing: border-box;
+    height: 50px;
+    border: 0px none transparent;
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 0px 15px;
+    background-color: #23d598;
+    cursor: pointer;
+    margin: 0px 5px;
+}
+#fields button:hover, #cta_thanks button:hover {
+    background-color: #0D9C6F;
+}
+#fields a {
+    font-weight: 500;
+    color: white;
+}
+#fields p.disclosure {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
 #photos {
     margin: 0px auto 25px auto;
     max-width: 1000px;
@@ -519,6 +579,10 @@ blockquote {
     margin: 0px;
     padding: 0px 30px 35px 30px;
 }
+.modal .explanation strong {
+    font-family: "Proxima Nova";
+    font-size: 22px;
+}
 .modal .explanation strong.highlight {
     color: #ff4e52;
 }
@@ -574,6 +638,7 @@ blockquote {
     width: 226px;
     cursor: pointer;
     margin: 3px 0px;
+    font-family: "Proxima Nova";
 }
 .modal .explanation .example button:hover {
     background: #ee3b50;
@@ -593,7 +658,8 @@ blockquote {
     border-bottom: 1px solid #aaa;
     margin-bottom: 5px;
     padding: 10px 15px;
-    font-size: 18px;
+    font-size: 22px;
+    font-family: "Proxima Nova";
 }
 .modal .explanation .example input.long {
     width: 50%;

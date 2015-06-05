@@ -72,7 +72,33 @@
             every day.
         </p>
     </div>
-    <h3>How it works</h3>
+    <h3>Not in Congress? Contact them!</h3>
+    <p>
+        Congress needs to hear from everyone. Surveillance reform is only just beginning.
+    </p>
+    <div id="fields" style="display: block;">
+        <form id="email_form" method="post">
+            <input id="cta_first_name" type="text" placeholder="Your name"/><input id="cta_email" type="text" placeholder="Email"/><input id="cta_street_address" type="text" placeholder="Street Address"/><input id="cta_postcode" type="text" placeholder="Zip" class="right"/>
+            <textarea id="action_comment">Congress has begun the work of reforming mass surveillance in the United States by passing the USA Freedom Act, but significant reform is still needed. Companies should not be granted immunity for sharing customer data with the NSA in violation of their own privacy agreements. The FBI should not be able to use counterterrorism resources to spy on peaceful political activists, as has happened with their surveillance of #BlackLivesMatter protestors, and their operation of a fleet of spy airplanes scooping up cell phone activity in U.S. metropolitan areas. Clearly, your work on surveillance reform is just beginning.
+
+Please overturn Executive Order 12333 and Section 702 of the Foreign Intelligence Surveillance Act. These laws have been abused by the government to engage in the unconstitutional mass surveillance of hundreds of millions of innocent civilians.
+
+Also, three representatives in the House have put forth amendments that would limit mass surveillance. Thomas Massie introduced an amendment that would prevent the government from weakening encryption standards. Ted Poe proposed an amendment to block the government from requiring companies to insert surveillance "backdoors" into their communications software. Jared Polis proposed an amendment to block the DEA from engaging in bulk collection under its subpoena authority. I urge you to support all of these efforts, and to take your own initiative to reign in the surveillance state.</textarea>
+            <button id="cta_email" type="submit">Email Congress</button>
+        </form>
+        <p class="disclosure">
+            <a href="https://www.fightforthefuture.org" target="_blank">Fight for the Future</a> will send
+            your letter to your lawmakers. We will email you with campaign updates.
+            <a href="https://www.fightforthefuture.org/privacy" target="_blank">Privacy Policy.</a>
+        </p>
+    </div>
+    <div id="cta_thanks" style="display: none;">
+        <p><strong>Thanks! Please share this page.</strong></p>
+        <a class="social facebook" href="#">Share</a>
+        <a class="social twitter" href="#">Tweet</a>
+        <br/><br/>
+    </div>
+    <h3>How the Blackout works</h3>
     <p>
         Participating web sites embed a small snippet of code on their pages
         that detects the IP address of Congress' computers, redirecting anyone
@@ -131,6 +157,58 @@
     <a href="https://www.fightforthefuture.org" target="_blank"><img class="logo" src="/images/fftf_logo.png"/></a>
     <a class="call" href="https://www.sunsetthepatriotact.com/?call=1" target="_blank">Call your lawmakers. Dial <em>1-920-END-4-215</em> <img src="/images/phone_icon.png"/></a>
 </div>
+
+
+<div class="overlay invisible" id="thanks_modal">
+    <div class="gutter">
+        <div class="modal">
+            <a class="close lite"></a>
+            <div class="explanation">
+                <p>
+                    <strong id="call_heading">Awesome! Now, can you call Congress?</strong><br/>
+                    Phone calls are even more effective than emails.
+                    Enter your phone number and we'll call your phone and connect
+                    you to your reps. We'll tell you what to say on the next step.
+                </p>
+                <div class="example">
+                    <form action="https://call-congress.fightforthefuture.org/submit" method="post">
+                        <input id="call_phone" class="long right" type="text" placeholder="555-555-5555"/>
+                        <button type="submit">Call Congress</button>
+                    </form>
+                    Can't call? Share this page!<br/>
+                    <a class="social facebook" href="#">Share</a>
+                    <a class="social twitter" href="#">Tweet</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="overlay invisible" id="calling_modal">
+    <div class="gutter">
+        <div class="modal">
+            <a class="close lite"></a>
+            <div class="explanation">
+                <p>
+                    <strong>We're calling your phone!</strong>
+                    <br/>
+                    Tell Congress to stop mass surveillance by overturning Section 215
+                    of the Patriot Act and Section 702 of FISA. Tell them that the USA
+                    FREEDOM Act is a fake reform bill that will only create new legal
+                    loopholes to extend NSA spying.
+                </p>
+                <div class="example">
+                    Please share this page!<br/>
+                    <a class="social facebook" href="#">Share</a>
+                    <a class="social twitter" href="#">Tweet</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
 <script type="text/javascript" src="/js/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="/js/breakcongress.js"></script>
 <script type="text/javascript">
