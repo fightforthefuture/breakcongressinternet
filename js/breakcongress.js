@@ -439,10 +439,12 @@ document.querySelector('#thanks_modal form').addEventListener('submit', function
 
 }, false);
 
+/*
 document.querySelector('#cta_call').addEventListener('click', function(e) {
     e.preventDefault();
     show_modal('thanks_modal');
 }, false);
+*/
 
 for (var i=0; i<close_modals.length; i++)
     bind_hide(close_modals[i]);

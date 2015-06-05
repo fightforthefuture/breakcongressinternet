@@ -201,7 +201,7 @@ div.cta {
     width: 700px;
     box-sizing: border-box;
     background: rgba(0, 0, 0, .8);
-    padding: 30px;
+    padding: 28px;
 
 }
 div.cta h2 { 
@@ -224,8 +224,8 @@ h3 {
     text-align: center;
     margin: 25px 0px 25px 0px;
     line-height: 1.2em;
-    padding-bottom: 3px;
-    border-bottom: 1px dashed #ddd;
+    padding-bottom: 4px;
+    border-bottom: 4px double #555;
 }
 h4 {
     font-weight: bold;
