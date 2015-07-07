@@ -380,7 +380,6 @@ document.querySelector('#fields form').addEventListener('submit', function(e) {
     var url = 'https://queue.fightforthefuture.org/action';
     show_modal('thanks_modal');
 
-    /*
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
@@ -389,7 +388,6 @@ document.querySelector('#fields form').addEventListener('submit', function(e) {
     }.bind(this);
     xhr.open("post", url, true);
     xhr.send(data);
-    */
 
     document.getElementById('fields').style.display = 'none';
     document.getElementById('cta_thanks').style.display = 'block';
